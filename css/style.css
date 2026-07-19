@@ -407,7 +407,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 .cta {
   background: linear-gradient(160deg, var(--navy), var(--navy-darkest));
   color: #fff;
-  padding: 88px 24px;
+  padding: 59px 24px 88px;
   text-align: center;
 }
 .cta img { display: block; width: 100%; max-width: 510px; margin: 0 auto 32px; }
@@ -420,7 +420,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
-.cta p { color: var(--cta-sub); margin: 16px auto 32px; max-width: 520px; font-size: 18px; }
+.cta p { color: var(--cta-sub); margin: 16px auto 21px; max-width: 520px; font-size: 18px; }
 
 /* ---- Footer ---- */
 .footer {
