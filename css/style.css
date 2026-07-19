@@ -235,6 +235,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   flex-wrap: wrap;
   gap: 16px 48px;
   align-items: baseline;
+  align-items: last baseline;
   margin-bottom: 48px;
 }
 .section-head h2 {
