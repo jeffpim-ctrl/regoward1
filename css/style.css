@@ -176,8 +176,10 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 }
 .hero-copy { flex: 1 1 480px; min-width: 300px; padding-bottom: 72px; }
 .hero-pill {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-weight: 900;
   font-size: 13px;
@@ -245,9 +247,10 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 .section-head h2 span { color: var(--red); }
 .section-head p {
   color: var(--muted);
-  max-width: 460px;
+  flex: 1 1 320px;
   margin: 0;
   font-size: 18px;
+  line-height: 1.4;
   text-wrap: pretty;
 }
 
