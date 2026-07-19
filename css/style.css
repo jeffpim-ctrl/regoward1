@@ -59,7 +59,7 @@ body {
   background: #fff;
   font-family: var(--sans);
   font-size: 16px;
-  font-weight: 500; /* renders as 300 until Museo Sans 500 is added to the Typekit kit */
+  font-weight: 500;
   line-height: 1.6;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
