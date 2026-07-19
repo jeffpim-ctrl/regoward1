@@ -22,7 +22,7 @@ No build step, no dependencies — plain HTML and CSS. Edit `index.html` for con
 2. In the repo: **Settings → Pages → Source: Deploy from a branch**, select `main` and `/ (root)`.
 3. The site publishes at `https://<username>.github.io/rego-ward1/`.
 
-**Before launch:** search `index.html` for `YOUR-USERNAME` and replace the canonical/Open Graph URLs with the real published URL (or custom domain). These absolute URLs are what Facebook uses to build the link-preview card.
+The canonical/Open Graph URLs in `index.html` point at the live site: `https://regoward1.com/`. If the domain ever changes, update those URLs — they are what Facebook uses to build the link-preview card.
 
 Using a custom domain (e.g. `frankrego.com`): add the domain under **Settings → Pages → Custom domain**, point the domain's DNS at GitHub Pages, and update the URLs above to match.
 
