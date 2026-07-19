@@ -285,7 +285,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   padding: 0 24px 28px;
   color: #fff;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 26px;
   letter-spacing: .2em;
   text-transform: uppercase;
   text-shadow: 0 1px 8px rgba(0,0,0,.5);
