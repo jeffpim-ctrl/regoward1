@@ -383,7 +383,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   font-family: var(--sans);
   font-weight: 700;
   -webkit-text-stroke: 0.03em currentColor;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--red);
