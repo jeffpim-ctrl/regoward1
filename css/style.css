@@ -194,7 +194,6 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 }
 .hero h1 {
   font-weight: 900;
-  -webkit-text-stroke: 0.018em currentColor;
   line-height: 1.02;
   letter-spacing: -0.02em;
   font-size: clamp(48px, 8.5vw, 96px);
