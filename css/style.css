@@ -20,7 +20,7 @@
 @font-face {
   font-family: 'Lato';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-display: swap;
   src: url('../assets/fonts/lato-900-latin.woff2') format('woff2');
 }
@@ -46,8 +46,8 @@
   --hero-sub: #DCE2F7;
   --cta-sub: #C7D0EE;
   --footer-text: #A9B4DC;
-  --serif: 'Roboto Slab', Georgia, serif;
-  --sans: 'Lato', -apple-system, 'Segoe UI', Arial, sans-serif;
+  --serif: 'museo-slab-rounded', 'Roboto Slab', Georgia, serif;
+  --sans: 'museo-sans', 'Lato', -apple-system, 'Segoe UI', Arial, sans-serif;
   --container: 1200px;
 }
 
@@ -59,6 +59,7 @@ body {
   background: #fff;
   font-family: var(--sans);
   font-size: 17px;
+  font-weight: 300;
   line-height: 1.6;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -88,7 +89,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 /* ---- Buttons ---- */
 .btn {
   display: inline-block;
-  font-weight: 900;
+  font-weight: 700;
   text-decoration: none;
   border-radius: 8px;
   padding: 16px 32px;
@@ -121,7 +122,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 }
 .brand {
   font-family: var(--serif);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 20px;
   color: var(--navy);
   text-decoration: none;
@@ -181,7 +182,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -192,7 +193,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   border-radius: 999px;
 }
 .hero h1 {
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.02;
   letter-spacing: -0.02em;
   font-size: clamp(48px, 8.5vw, 96px);
@@ -225,7 +226,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   margin: 0 auto;
   max-width: var(--container);
   font-family: var(--serif);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(20px, 3vw, 30px);
 }
 
@@ -239,7 +240,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   margin-bottom: 48px;
 }
 .section-head h2 {
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.05;
   font-size: clamp(34px, 5vw, 56px);
   margin: 0;
@@ -281,7 +282,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   margin: 0 auto;
   padding: 0 24px 28px;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 13px;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -307,7 +308,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   display: flex;
   align-items: center;
   gap: 12px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 22px;
   margin: 0;
 }
@@ -320,7 +321,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   display: grid;
   place-items: center;
   font-family: var(--sans);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   flex: 0 0 auto;
 }
@@ -361,7 +362,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 }
 .check-red {
   font-family: var(--serif);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 22px;
   color: var(--red);
   flex: 0 0 auto;
@@ -378,7 +379,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 .about-card { background: #fff; border-radius: 12px; padding: 22px 26px; }
 .about-card h3 {
   font-family: var(--sans);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -408,7 +409,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 }
 .cta img { display: block; width: 100%; max-width: 510px; margin: 0 auto 32px; }
 .cta h2 {
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.05;
   color: #fff;
   font-size: clamp(30px, 4.5vw, 48px);
