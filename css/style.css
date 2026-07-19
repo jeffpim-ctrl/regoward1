@@ -205,9 +205,8 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   font-weight: 700;
   color: var(--hero-sub);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 6px 22px;
-  max-width: 560px;
 }
 .hero-sub span { white-space: nowrap; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -216,7 +215,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   .hero-sub { display: block; text-align: left; }
   .hero-sub span { display: block; }
 }
-.hero-photo { flex: 0 1 320px; min-width: 220px; align-self: flex-end; }
+.hero-photo { flex: 0 1 400px; min-width: 275px; align-self: flex-end; }
 .hero-photo img { display: block; width: 100%; border-radius: 16px 16px 0 0; }
 
 .vote-bar { background: var(--red); color: #fff; padding: 16px 24px; text-align: center; }
