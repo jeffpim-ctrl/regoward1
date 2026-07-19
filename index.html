@@ -1,0 +1,454 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;800&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+  /* Museo Slab is not available as a free web font. Roboto Slab is the
+     closest free substitute and reads nearly identically at headline sizes.
+     If you license Museo Slab for web, swap the font-family below. */
+
+  .rego * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .rego {
+    --red:   #E8232A;
+    --navy:  #1B2A6B;
+    --ink:   #2B2B2B;
+    --gray:  #5A5F6B;
+    --line:  #E2E4EC;
+    --paper: #FFFFFF;
+    --wash:  #F5F6FA;
+
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .rego h1, .rego h2, .rego h3, .rego .slab {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+
+  .rego-wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HERO ---------- */
+  .rego-hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 56px 0 0;
+  }
+  .rego-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 225px;
+    gap: 48px;
+    align-items: end;
+  }
+  .rego-eyebrow {
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9FB0E8;
+    margin-bottom: 18px;
+  }
+  .rego-hero h1 {
+    font-size: clamp(40px, 7vw, 76px);
+    color: #fff;
+  }
+  .rego-hero h1 em {
+    font-style: normal;
+    color: #FF5C5C;
+  }
+  .rego-triad {
+    margin-top: 22px;
+    font-size: clamp(18px, 2.4vw, 25px);
+    font-weight: 700;
+    color: #DCE2F7;
+  }
+  .rego-triad span { white-space: nowrap; }
+  .rego-hero-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    margin-bottom: -1px;
+  }
+
+  /* ---------- VOTE BAR ---------- */
+  .rego-votebar {
+    background: var(--red);
+    color: #fff;
+    margin-top: 40px;
+    padding: 20px 0;
+  }
+  .rego-votebar-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 20px;
+  }
+  .rego-votebar .lbl {
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: .9;
+  }
+  .rego-votebar .date {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 800;
+    font-size: clamp(22px, 3.4vw, 34px);
+  }
+
+  /* ---------- LOGO BAND ---------- */
+  .rego-logoband {
+    background: #fff;
+    text-align: center;
+    padding: 40px 24px;
+  }
+  .rego-logoband img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  .rego-sec { padding: 64px 0; }
+  .rego-sec--wash { background: var(--wash); }
+  .rego-sec h2 {
+    font-size: clamp(30px, 4.4vw, 44px);
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .rego-sec h2 em { font-style: normal; color: var(--red); }
+  .rego-sec .rego-lede {
+    color: #5A5F6B;
+    max-width: 620px;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+
+  /* ---------- FULL-WIDTH BAND IMAGE ---------- */
+  .rego-band {
+    display: block;
+    width: 100%;
+    max-height: 374px;
+    object-fit: cover;
+    object-position: center 40%;
+    margin: -64px 0 48px;
+    border-bottom: 6px solid var(--red);
+  }
+
+  /* ---------- RECORD PILLARS ---------- */
+  .rego-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .rego-pillar {
+    background: #fff;
+    border-top: 5px solid var(--red);
+    padding: 26px 24px 28px;
+    box-shadow: 0 2px 14px rgba(27,42,107,.07);
+  }
+  .rego-pillar h3 {
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .rego-pillar ul { list-style: none; }
+  .rego-pillar li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  .rego-pillar li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 9px;
+    width: 9px; height: 9px;
+    background: var(--red);
+    border-radius: 50%;
+  }
+
+  /* ---------- PRIORITIES ---------- */
+  .rego-priorities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 40px;
+    list-style: none;
+    max-width: 860px;
+  }
+  .rego-priorities li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .rego-check {
+    flex: 0 0 auto;
+    color: var(--red);
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .rego-about { max-width: 900px; }
+  .rego-about dl { margin-top: 4px; }
+  .rego-about dt {
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-top: 22px;
+  }
+  .rego-about dt:first-child { margin-top: 0; }
+  .rego-about dd { margin-top: 4px; }
+  .rego-civic {
+    margin-top: 8px;
+    columns: 2;
+    column-gap: 32px;
+    list-style: none;
+    font-size: 16px;
+  }
+  .rego-civic li {
+    break-inside: avoid;
+    padding: 5px 0 5px 18px;
+    position: relative;
+  }
+  .rego-civic li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 13px;
+    width: 7px; height: 7px;
+    background: var(--navy);
+    border-radius: 50%;
+  }
+
+  /* ---------- CTA + FOOTER ---------- */
+  .rego-cta {
+    background: var(--navy);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  .rego-cta h2 { color: #fff; font-size: clamp(28px, 4vw, 40px); }
+  .rego-cta p { color: #C7D0EE; margin: 14px auto 28px; max-width: 520px; }
+  .rego-btn {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: .01em;
+    padding: 16px 34px;
+    border: 3px solid var(--red);
+    transition: background .15s ease, color .15s ease;
+  }
+  .rego-btn:hover, .rego-btn:focus { background: transparent; color: #fff; }
+  .rego-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  .rego-foot {
+    background: #12194A;
+    color: #96A2CE;
+    font-size: 14px;
+    padding: 26px 0 34px;
+    text-align: center;
+  }
+  .rego-foot a { color: #C7D0EE; }
+  .rego-foot .disc {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #6E7BAE;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px) {
+    .rego-hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    .rego-hero-photo { max-width: 195px; }
+    .rego-pillars { grid-template-columns: 1fr; gap: 20px; }
+    .rego-priorities { grid-template-columns: 1fr; }
+    .rego-civic { columns: 1; }
+    .rego-band { max-height: 220px; margin: -48px 0 32px; }
+    .rego-sec { padding: 48px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rego * { transition: none !important; animation: none !important; }
+  }
+</style>
+
+<div class="rego">
+
+  <!-- ==================== HERO ==================== -->
+  <header class="rego-hero">
+    <div class="rego-wrap">
+      <div class="rego-hero-grid">
+        <div>
+          <p class="rego-eyebrow">Re-Elect &middot; Ward 1 &middot; East Providence City Council</p>
+          <h1>The Job<br><em>Isn't Finished.</em></h1>
+          <p class="rego-triad">
+            <span>More to deliver.</span>
+            <span>More to protect.</span>
+            <span>More to get right.</span>
+          </p>
+        </div>
+
+        <img class="rego-hero-photo"
+             src="https://raw.githubusercontent.com/jeffpim-ctrl/rego-images/main/Frank_Rego_Ward_1_headshot.jpg"
+             alt="Councilman Frank Rego">
+      </div>
+    </div>
+
+    <div class="rego-votebar">
+      <div class="rego-wrap rego-votebar-inner">
+        <span class="lbl">Non-Partisan Primary</span>
+        <span class="date">Vote Wednesday, September 9, 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== LOGO BAND ==================== -->
+  <div class="rego-logoband">
+    <img src="https://raw.githubusercontent.com/jeffpim-ctrl/rego-images/main/RegoWard1.png"
+         alt="Re-Elect Frank Rego, Ward 1, East Providence City Council">
+  </div>
+
+  <!-- ==================== RECORD ==================== -->
+  <section class="rego-sec rego-sec--wash">
+
+    <img class="rego-band"
+         src="https://raw.githubusercontent.com/jeffpim-ctrl/rego-images/main/Frank_Rego_Ward_1_community_wide.jpg"
+         alt="Councilman Frank Rego speaking with residents at a community event in East Providence">
+
+    <div class="rego-wrap">
+      <h2>A Record of <em>Results.</em></h2>
+      <p class="rego-lede">
+        Four years of showing up, listening, and delivering for the families,
+        businesses, and neighborhoods of Ward 1.
+      </p>
+
+      <div class="rego-pillars">
+        <div class="rego-pillar">
+          <h3>Protecting Our Families</h3>
+          <ul>
+            <li>Supported the renovation of the East Providence Police Station</li>
+            <li>Expanded rescue coverage at Fire Station&nbsp;#3, and continues pushing for full 24-hour service</li>
+            <li>Delivered traffic safety improvements throughout Ward 1</li>
+          </ul>
+        </div>
+
+        <div class="rego-pillar">
+          <h3>Community Investment</h3>
+          <ul>
+            <li>Cast the deciding vote for the new Community Center</li>
+            <li>Secured funding for school improvements at Myron J. Francis &amp; Orlo Avenue Elementary</li>
+            <li>Championed park upgrades, including an ADA-accessible playground at Kent Field</li>
+          </ul>
+        </div>
+
+        <div class="rego-pillar">
+          <h3>Smart Growth</h3>
+          <ul>
+            <li>Sponsored new ADU standards for responsible development</li>
+            <li>Introduced mixed-use zoning to spur economic growth</li>
+            <li>Spearheaded East Providence Restaurant Week</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRIORITIES ==================== -->
+  <section class="rego-sec">
+    <div class="rego-wrap">
+      <h2>My <em>Priorities</em></h2>
+      <p class="rego-lede">What I'll keep fighting for in a second term.</p>
+
+      <ul class="rego-priorities">
+        <li><span class="rego-check">&#10003;</span> Strong public safety for East Providence</li>
+        <li><span class="rego-check">&#10003;</span> Ward 1 infrastructure investment</li>
+        <li><span class="rego-check">&#10003;</span> Quality education for all students</li>
+        <li><span class="rego-check">&#10003;</span> Fiscally responsible budgets</li>
+        <li><span class="rego-check">&#10003;</span> Economic growth &amp; responsible housing</li>
+        <li><span class="rego-check">&#10003;</span> A strong voice for Ward 1</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="rego-sec rego-sec--wash">
+    <div class="rego-wrap">
+      <h2>About <em>Frank</em></h2>
+      <p class="rego-lede">Lifelong East Providence resident. Ward 1 Councilman and City Council Vice President.</p>
+
+      <div class="rego-about">
+        <dl>
+          <dt>City of East Providence</dt>
+          <dd>Ward 1 City Council &middot; City Council Vice President</dd>
+
+          <dt>Family</dt>
+          <dd>Son of the late Luis &amp; Mary Rego. Husband of Lisa. Father of Chelsea, Adam, and Joey.</dd>
+
+          <dt>Education</dt>
+          <dd>St. Raphael Academy &middot; Rhode Island College</dd>
+
+          <dt>Occupation</dt>
+          <dd>Owner &amp; President of an East Providence-based company</dd>
+
+          <dt>Volunteer &amp; Civic</dt>
+          <dd>
+            <ul class="rego-civic">
+              <li>Rumford Little League: coach, board member, president</li>
+              <li>AYSO: coach, board member</li>
+              <li>St. Margaret: CYO coach</li>
+              <li>Rumford Lions: Vice President</li>
+              <li>Groden Center Parents &amp; Friends Autism Society of RI</li>
+              <li>Boys &amp; Girls Club of Pawtucket: coach</li>
+              <li>EP Tax Review Board</li>
+              <li>RI Board of Elections</li>
+              <li>EP Heritage Days Committee</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="rego-cta">
+    <div class="rego-wrap">
+      <h2>Stay With Us Through Election Day</h2>
+      <p>Campaign updates, community news, and my continued work for Ward 1 — all in one place.</p>
+      <a class="rego-btn"
+         href="https://facebook.com/RegoWard1"
+         target="_blank"
+         rel="noopener">Follow the Campaign on Facebook</a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="rego-foot">
+    <div class="rego-wrap">
+      <p>
+        Manuel Vinhateiro, Treasurer &middot;
+        <a href="mailto:vinhateirom@gmail.com">vinhateirom@gmail.com</a>
+      </p>
+      <p class="disc">Paid for by Frank Rego Committee, Manny Vinhateiro, Treasurer</p>
+    </div>
+  </footer>
+
+</div>
