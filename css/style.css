@@ -122,7 +122,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 }
 .brand {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 900;
   font-size: 20px;
   color: var(--navy);
   text-decoration: none;
@@ -216,6 +216,9 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 .hero-logo { display: none; }
 
 @media (max-width: 620px) {
+  /* Halve the space above "The Job Isn't Finished." */
+  .hero-inner { padding-top: 36px; }
+
   /* Center headline-level content (cards, bullet lists & their subheads keep their own alignment) */
   .hero h1 { text-align: center; }
   .hero-sub { display: block; text-align: center; }
