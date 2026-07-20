@@ -215,8 +215,21 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
 @media (max-width: 620px) {
-  .hero-sub { display: block; text-align: left; }
+  /* Center headline-level content (cards, bullet lists & their subheads keep their own alignment) */
+  .hero h1 { text-align: center; }
+  .hero-sub { display: block; text-align: center; }
   .hero-sub span { display: block; }
+  .hero-actions { justify-content: center; }
+  .section-head { justify-content: center; text-align: center; }
+
+  /* Hide the photo caption */
+  .record-banner-caption { display: none; }
+
+  /* 25% less padding above "A Record of Results." (raised specificity to beat the later base rule) */
+  section.record .container { padding-top: 54px; }
+
+  /* Slightly smaller "Paid for by…" disclaimer (raised specificity to beat the later base rule) */
+  footer.footer { font-size: 11px; }
 }
 .hero-photo { flex: 0 1 400px; min-width: 275px; align-self: flex-end; }
 .hero-photo img { display: block; width: 100%; border-radius: 16px 16px 0 0; }
