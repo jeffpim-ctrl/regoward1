@@ -2,28 +2,9 @@
    Re-Elect Frank Rego — Ward 1, East Providence
    ========================================================================== */
 
-/* ---- Fonts (self-hosted, latin subset) ---- */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/lato-400-latin.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../assets/fonts/lato-700-latin.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../assets/fonts/lato-900-latin.woff2') format('woff2');
-}
+/* ---- Fonts ----
+   Body & headings come from Adobe Fonts (Museo Sans / Museo Slab Rounded).
+   Roboto Slab is kept self-hosted only as an offline fallback for headings. */
 @font-face {
   font-family: 'Roboto Slab';
   font-style: normal;
@@ -47,7 +28,7 @@
   --cta-sub: #C7D0EE;
   --footer-text: #A9B4DC;
   --serif: 'museo-slab-rounded', 'Roboto Slab', Georgia, serif;
-  --sans: 'museo-sans', 'Lato', -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans: 'museo-sans', -apple-system, 'Segoe UI', Arial, sans-serif;
   --container: 1200px;
 }
 
