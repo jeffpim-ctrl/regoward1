@@ -36,6 +36,15 @@ python3 -m http.server 8080
 
 Then open http://localhost:8080.
 
+## Cache-busting the stylesheet
+
+`index.html` and `404.html` link the stylesheet as `css/style.css?v=YYYYMMDD`.
+The `?v=` value forces browsers to fetch a fresh copy instead of reusing a
+cached one. **Whenever you change `css/style.css`, bump that number** (e.g. to
+today's date) in both HTML files and re-upload all three. Otherwise returning
+visitors keep seeing the old styling until their browser cache expires on its
+own.
+
 ## Notes
 
 - The `og-image.jpg` (1200×630) is the photo shown when the site link is shared on Facebook or elsewhere. After changing it, refresh Facebook's cache at https://developers.facebook.com/tools/debug/
