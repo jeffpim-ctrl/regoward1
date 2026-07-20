@@ -213,10 +213,31 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 }
 .hero-sub span { white-space: nowrap; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-logo { display: none; }
 
 @media (max-width: 620px) {
-  .hero-sub { display: block; text-align: left; }
+  /* Center headline-level content (cards, bullet lists & their subheads keep their own alignment) */
+  .hero h1 { text-align: center; }
+  .hero-sub { display: block; text-align: center; }
   .hero-sub span { display: block; }
+  .hero-actions { justify-content: center; }
+  .section-head { justify-content: center; text-align: center; }
+
+  /* Drop the hero pill; show the campaign logo under the tagline instead */
+  .hero-pill { display: none; }
+  .hero-logo { display: block; width: 75vw; height: auto; margin: 4px auto 32px; }
+
+  /* Match the lower CTA logo to 75% viewport width (raised specificity to beat the later base rule) */
+  section.cta img { width: 75vw; }
+
+  /* Hide the photo caption */
+  .record-banner-caption { display: none; }
+
+  /* 25% less padding above "A Record of Results." (raised specificity to beat the later base rule) */
+  section.record .container { padding-top: 54px; }
+
+  /* Slightly smaller "Paid for by…" disclaimer (raised specificity to beat the later base rule) */
+  footer.footer { font-size: 11px; }
 }
 .hero-photo { flex: 0 1 400px; min-width: 275px; align-self: flex-end; }
 .hero-photo img { display: block; width: 100%; border-radius: 16px 16px 0 0; }
