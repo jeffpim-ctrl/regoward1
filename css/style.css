@@ -219,6 +219,9 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   /* Halve the space above "The Job Isn't Finished." */
   .hero-inner { padding-top: 36px; }
 
+  /* Smaller election-date bar (div.vote-bar raises specificity over the later base rule) */
+  div.vote-bar p { font-size: 19px; }
+
   /* Center headline-level content (cards, bullet lists & their subheads keep their own alignment) */
   .hero h1 { text-align: center; }
   .hero-sub { display: block; text-align: center; }
