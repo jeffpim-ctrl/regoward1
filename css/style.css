@@ -188,9 +188,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   font-size: clamp(21px, 2.5vw, 27px);
   font-weight: 700;
   color: var(--hero-sub);
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 6px 22px;
+  display: block;
 }
 .hero-sub span { white-space: nowrap; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
