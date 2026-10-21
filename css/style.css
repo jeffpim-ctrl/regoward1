@@ -161,10 +161,19 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   letter-spacing: -0.02em;
   font-size: clamp(48px, 8.5vw, 96px);
   color: #fff;
-  margin: 0 0 36px;
+  margin: 0;
   text-wrap: balance;
 }
 .hero h1 span { color: var(--red); }
+/* "Trusted Results." with the yard sign beside it; the sign shrinks if the row runs out of room */
+.hero-row { display: flex; align-items: center; gap: 0.25em; }
+.hero-sign { flex: 0 1 auto; width: 2.1em; min-width: 0; margin-top: 0.1em; }
+.hero-sub {
+  margin: 28px 0 36px;
+  font-size: clamp(21px, 2.5vw, 27px);
+  font-weight: 700;
+  color: #fff;
+}
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-logo { display: none; }
 
@@ -181,6 +190,9 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 
   /* Center headline-level content (cards, bullet lists & their subheads keep their own alignment) */
   .hero h1 { text-align: center; }
+  .hero-row { justify-content: center; }
+  .hero-sign { display: none; } /* too small to read here; the campaign logo below carries it */
+  .hero-sub { text-align: center; }
   .hero-actions { justify-content: center; }
   .section-head { justify-content: center; text-align: center; }
 
