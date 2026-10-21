@@ -23,8 +23,6 @@
   --bg-light: #F5F6FA;
   --ink: #2B2B2B;
   --muted: #5A5F6B;
-  --hero-pill: #9FB0E8;
-  --hero-sub: #DCE2F7;
   --cta-sub: #C7D0EE;
   --footer-text: #A9B4DC;
   --serif: 'museo-slab-rounded', 'Roboto Slab', Georgia, serif;
@@ -157,40 +155,16 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   align-items: flex-end;
 }
 .hero-copy { flex: 1 1 480px; min-width: 300px; padding-bottom: 72px; }
-.hero-pill {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--hero-pill);
-  margin: 0 0 24px;
-  border: 1px solid rgba(159,176,232,.35);
-  padding: 8px 16px;
-  border-radius: 999px;
-}
 .hero h1 {
   font-weight: 800;
   line-height: 0.90;
   letter-spacing: -0.02em;
   font-size: clamp(48px, 8.5vw, 96px);
   color: #fff;
-  margin: 0;
+  margin: 0 0 36px;
   text-wrap: balance;
 }
 .hero h1 span { color: var(--red); }
-.hero-sub {
-  margin: 28px 0 36px;
-  font-size: clamp(21px, 2.5vw, 27px);
-  font-weight: 700;
-  color: var(--hero-sub);
-  display: block;
-}
-.hero-sub span { white-space: nowrap; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-logo { display: none; }
 
@@ -207,13 +181,10 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 
   /* Center headline-level content (cards, bullet lists & their subheads keep their own alignment) */
   .hero h1 { text-align: center; }
-  .hero-sub { display: block; text-align: center; }
-  .hero-sub span { display: block; }
   .hero-actions { justify-content: center; }
   .section-head { justify-content: center; text-align: center; }
 
-  /* Drop the hero pill; show the campaign logo under the tagline instead */
-  .hero-pill { display: none; }
+  /* Show the campaign logo under the tagline */
   .hero-logo { display: block; width: 75vw; height: auto; margin: 4px auto 32px; }
 
   /* Match the lower CTA logo to 75% viewport width (raised specificity to beat the later base rule) */
