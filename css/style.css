@@ -201,6 +201,10 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   /* Smaller election-date bar (div.vote-bar raises specificity over the later base rule) */
   div.vote-bar p { font-size: 19px; }
 
+  /* Stack the election date over the poll hours and drop the bullet between them */
+  .vote-part { display: block; }
+  .vote-sep { display: none; }
+
   /* Center headline-level content (cards, bullet lists & their subheads keep their own alignment) */
   .hero h1 { text-align: center; }
   .hero-sub { display: block; text-align: center; }
@@ -235,6 +239,35 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   font-weight: 700;
   font-size: clamp(24px, 3.6vw, 38px);
 }
+.vote-part { white-space: nowrap; }
+
+/* ---- Endorsements ---- */
+.endorsements { padding: 88px 0; }
+.endorse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.endorse-grid li {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  background: var(--bg-light);
+  border-left: 4px solid var(--red);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.endorse-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.15;
+  color: var(--navy);
+}
+.endorse-role { color: var(--muted); font-size: 16px; }
 
 /* ---- Sections ---- */
 .section-head {
