@@ -152,7 +152,7 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   display: flex;
   flex-wrap: wrap;
   gap: 40px 64px;
-  align-items: flex-end;
+  align-items: center;
 }
 .hero-copy { flex: 1 1 480px; min-width: 300px; padding-bottom: 72px; }
 .hero h1 {
@@ -211,8 +211,39 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   /* Slightly smaller "Paid for by…" disclaimer (raised specificity to beat the later base rule) */
   footer.footer { font-size: 11px; }
 }
-.hero-photo { flex: 0 1 400px; min-width: 275px; align-self: flex-end; }
-.hero-photo img { display: block; width: 100%; border-radius: 16px 16px 0 0; }
+
+/* ---- Hero thank-you note, styled like a Facebook post ---- */
+.hero-post {
+  flex: 0 1 460px;
+  min-width: 0;
+  margin-bottom: 72px; /* matches .hero-copy's bottom padding */
+  background: #fff;
+  color: #050505;
+  border-radius: 16px;
+  padding: 18px 20px 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.28);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.post-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.post-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; }
+.post-name { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.2; }
+.post-date { margin: 2px 0 0; font-size: 13px; font-weight: 700; color: #65676B; }
+.post-more { margin-left: auto; align-self: flex-start; color: #65676B; font-size: 13px; letter-spacing: 1px; }
+.post-body p { margin: 0 0 10px; }
+.post-body p:last-child { margin-bottom: 0; }
+
+/* Once the post wraps below the headline (480 + 460 + 64 gap + 48 padding),
+   drop the space that kept the two columns level */
+@media (max-width: 1051px) {
+  .hero-copy { padding-bottom: 0; }
+  .hero-post { margin-bottom: 48px; }
+}
+@media (max-width: 620px) {
+  .hero-post { margin-bottom: 36px; padding: 16px; }
+}
 
 .vote-bar { background: var(--red); color: #fff; padding: 16px 24px; text-align: center; }
 .vote-bar p {
