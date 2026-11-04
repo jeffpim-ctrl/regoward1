@@ -452,3 +452,8 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
   border-top: 1px solid rgba(255,255,255,.08);
 }
 .footer p { margin: 0; }
+
+/* ---- Post-election thank-you ----
+   The hero line under "Thank You, Ward 1." is a sentence, not two short words. */
+.hero-sub { max-width: 30ch; line-height: 1.3; }
+@media (max-width: 620px) { .hero-sub { margin-left: auto; margin-right: auto; } }
