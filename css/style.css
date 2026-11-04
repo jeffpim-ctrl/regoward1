@@ -235,14 +235,21 @@ h1, h2, h3 { font-family: var(--serif); color: var(--navy); }
 .post-body p { margin: 0 0 10px; }
 .post-body p:last-child { margin-bottom: 0; }
 
-/* Once the post wraps below the headline (480 + 460 + 64 gap + 48 padding),
-   drop the space that kept the two columns level */
+/* Once the post no longer fits beside the headline (480 + 460 + 64 gap + 48 padding),
+   stack the hero and put the post right under "Thank You, Ward 1." by letting the
+   headline, tagline, logo and buttons join the hero's column directly */
 @media (max-width: 1051px) {
-  .hero-copy { padding-bottom: 0; }
-  .hero-post { margin-bottom: 48px; }
+  .hero-inner { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0; }
+  .hero-copy { display: contents; }
+  .hero h1 { order: 1; }
+  .hero-post { order: 2; flex: none; width: 100%; max-width: 460px; margin: 28px 0 0; }
+  .hero-sub { order: 3; }
+  .hero-logo { order: 4; }
+  .hero-actions { order: 5; margin-bottom: 48px; }
 }
 @media (max-width: 620px) {
-  .hero-post { margin-bottom: 36px; padding: 16px; }
+  .hero-post { margin: 28px auto 0; padding: 16px; }
+  .hero-actions { margin-bottom: 40px; }
 }
 
 .vote-bar { background: var(--red); color: #fff; padding: 16px 24px; text-align: center; }
