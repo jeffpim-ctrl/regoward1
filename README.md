@@ -2,7 +2,7 @@
 
 Campaign website for Frank Rego's 2026 re-election to the East Providence City Council, Ward 1.
 
-**Election day: Tuesday, November 3, 2026. Polls open 7am–8pm.**
+**Frank was re-elected November 3, 2026. The site now carries a post-election thank-you.**
 
 ## Structure
 
